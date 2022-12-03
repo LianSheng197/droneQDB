@@ -1,0 +1,62 @@
+<html data-scheme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    <link rel="stylesheet" href="./node_modules/tocas/dist/tocas.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&amp;display=swap"
+        rel="stylesheet">
+    <title>模擬試驗系統</title>
+</head>
+
+<body>
+    <div class="ts-content is-secondary is-fitted">
+        <div class="ts-container is-narrow">
+            <div class="ts-tab">
+                <a href="index.html" class="item">首頁</a>
+                <a href="exam.html" class="item is-active">測驗</a>
+                <a href="about.html" class="item">關於</a>
+            </div>
+        </div>
+        <div class="ts-progress is-tiny">
+            <div id="progressBar" class="bar" style="background-color: lightblue; opacity: 0.4; --value: 0;"></div>
+        </div>
+    </div>
+    <div class="ts-content is-center-aligned is-vertically-very-padded" style="background: var(--ts-gray-50)">
+        <div class="ts-space"></div>
+        <div class="ts-container is-narrow">
+            <div class="ts-header is-center-aligned is-huge is-heavy" id="currentTitle">選擇題數</div>
+        </div>
+    </div>
+    <div class="ts-content" style="width: 50%; min-width: 300px; max-width: 600px; margin: 0 auto;" id="content">
+        <div class="ts-row">
+            <div class="ts-center">
+                <button class="ts-button is-large is-fluid is-secondary" id="opt20">20 題</button>
+            </div>
+        </div>
+        <div class="ts-space"></div>
+        <div class="ts-space"></div>
+        <div class="ts-space"></div>
+        <div class="ts-row">
+            <div class="ts-center">
+                <button class="ts-button is-large is-fluid is-secondary" id="opt50">50 題</button>
+            </div>
+        </div>
+        <div class="ts-space"></div>
+        <div class="ts-space"></div>
+        <div class="ts-space"></div>
+        <div class="ts-row">
+            <div class="ts-center">
+                <button class="ts-button is-large is-fluid is-secondary" id="opt100">100 題</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./exam.js"></script>
+</body>
+
+</html>
