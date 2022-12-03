@@ -48,6 +48,7 @@ for (let section = 1; section <= 4; section++) {
         // 處理最後一行，避免漏掉最後一題
         if (index === lines.length - 1) {
             currentQuestion.options = currentOptions;
+            currentQuestion.section = section;
             data.data[`S${section}-${currentQuestion.number}`] = currentQuestion;
             currentQuestion = {};
             currentOptions = {};
