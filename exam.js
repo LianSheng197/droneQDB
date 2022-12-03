@@ -114,7 +114,6 @@
                 const submit = document.createElement("button");
                 submit.classList.add("ts-button", "is-large", "is-fluid", "is-disabled", "_submit");
                 submit.innerText = "送出答案";
-                console.log(questionData);
                 submit.onclick = () => showQuestionResult(selectedOption, questionData.answer);
                 submit.disabled = true;
 
@@ -230,9 +229,6 @@
 
                         content.append(text, space.cloneNode(), space.cloneNode());
                     });
-
-                    console.log(answerResult);
-                    console.log(answerResult[ans], questionData.answer);
                 });
 
                 const submit = document.createElement("button");
