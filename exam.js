@@ -227,15 +227,17 @@
                             text.style.color = "var(--ts-positive-400)";
                         }
 
-                        content.append(text, space.cloneNode(), space.cloneNode());
+                        content.append(text, space.cloneNode());
                     });
+
+                    content.append(space.cloneNode(), space.cloneNode(), space.cloneNode());
                 });
 
                 const submit = document.createElement("button");
                 submit.classList.add("ts-button", "is-large", "is-fluid", "_submit");
                 submit.innerText = "再試一次";
                 submit.onclick = () => location.reload();
-                content.append(submit);
+                content.append(submit, space.cloneNode(), space.cloneNode(), space.cloneNode(), space.cloneNode(), space.cloneNode());
             }
         }
     }
