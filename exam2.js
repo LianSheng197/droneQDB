@@ -34,20 +34,19 @@
 
 (() => {
     let count = 0;
-
     init();
 
     /**
      * 就是初始化
      */
     function init() {
-        const opt20 = document.querySelector("#opt20");
-        const opt50 = document.querySelector("#opt50");
-        const opt100 = document.querySelector("#opt100");
+        const opt40 = document.querySelector("#opt40");
+        const opt80 = document.querySelector("#opt100");
+        const opt150 = document.querySelector("#opt150");
 
-        opt20.onclick = () => prepareExam(20);
-        opt50.onclick = () => prepareExam(50);
-        opt100.onclick = () => prepareExam(100);
+        opt40.onclick = () => prepareExam(40);
+        opt80.onclick = () => prepareExam(100);
+        opt150.onclick = () => prepareExam(150);
     }
 
     /**
@@ -59,7 +58,7 @@
         const selectedQuestions = [];
 
         /** @type {AllQuestions} */
-        const allQuestions = await fetch("raw/result.json").then(r => r.json());
+        const allQuestions = await fetch("raw2/result.json").then(r => r.json());
         const allQuestionKeys = Object.keys(allQuestions.data);
 
         while (selectedQuestions.length < questions) {
