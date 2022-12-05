@@ -2,8 +2,8 @@ import * as fs from 'fs';
 import path from 'path';
 
 const __dirname = path.resolve();
-const rawQuestionN = "raw/rawQ<N>.txt";
-const rawAnswerN = "raw/rawA<N>.txt";
+const rawQuestionN = "./rawQ<N>.txt";
+const rawAnswerN = "./rawA<N>.txt";
 const resultFile = "result.json";
 const data = {
     version: "1110707",
@@ -22,7 +22,6 @@ for (let section = 1; section <= 4; section++) {
     const content = fs.readFileSync(rawFile).toString();
     const lines = content.split("\n");
 
-    let isQuestionCompleted = false;
     let currentQuestion = {};
     let currentOptions = {};
     lines.forEach((ln, index) => {

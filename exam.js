@@ -59,7 +59,7 @@
         const selectedQuestions = [];
 
         /** @type {AllQuestions} */
-        const allQuestions = await fetch("result.json").then(r => r.json());
+        const allQuestions = await fetch("raw/result.json").then(r => r.json());
         const allQuestionKeys = Object.keys(allQuestions.data);
 
         while (selectedQuestions.length < questions) {
