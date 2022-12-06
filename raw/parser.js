@@ -28,11 +28,11 @@ for (let section = 1; section <= 4; section++) {
         if (ln.startsWith(" ".repeat(4))) {
             const thisQuestion = ln.trim().split(". ");
             currentQuestion.number = thisQuestion[0] - 0;
-            currentQuestion.description = thisQuestion[1];
+            currentQuestion.description = thisQuestion.splice(1).join(" ");
         } else if (ln.match(/^\([ABCD]\)/)) {
             const thisOption = ln.trim().split(" ");
             const thisId = thisOption[0].replace(/[\(\)]/g, "").toLowerCase();
-            const thisDescription = thisOption[1];
+            const thisDescription = thisOption.splice(1).join(" ");
             currentOptions[thisId] = thisDescription;
         } else if (ln === "") {
             currentQuestion.options = currentOptions;
